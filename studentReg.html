@@ -6,9 +6,82 @@
     <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <title>Document</title>
+    <title>Student Register</title>
 </head>
 <body>
+    
+
+    <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+
+        <div class="container-fluid">
+            <li class="navbar-brand"><a class="nav-link" href="#">Logo</a></li>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target = "#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    
+                    <li class="nav-item"><a class="nav-link" href="studentReg.html">Registration</a></li>
+                    <li class="nav-item"><a class="nav-link" href="course.html">Courses</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Intakes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Result</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Program</a></li>
+                </ul>
+                  <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Log out</a>
+                    </li>
+                </ul>
+            </div>
+            
+        </div>
+
+    </nav>
+
+    <div class="container mt-4">
+        <h1 class="mb-5 text-primary">Student Registration Form</h1>
+        <form action="">
+
+            
+                <div class="row mb-4 align-items-center">                    
+                    <label for="" class="rounded col-md-2 col-form-label text-md-start bg-info text-light">Student Name</label> 
+                    <div class="col-md-10">
+                        <input type="text" class="form-control">
+                    </div>                   
+                    
+                </div>
+
+                <div class="row mb-4 align-items-center">                    
+                    <label for="" class="rounded col-md-2 col-form-label text-md-start bg-info text-light">Date of Birth</label> 
+                    <div class="col-md-10">
+                        <input type="date" class="form-control">
+                    </div>                   
+                    
+                </div>
+
+                <div class="row mb-4 align-items-center">                    
+                    <label for="" class="rounded col-md-2 col-form-label text-md-start bg-info text-light">Email</label> 
+                    <div class="col-md-10">
+                        <input type="email" class="form-control">
+                    </div>                   
+                    
+                </div>
+                
+                <div class="row mb-4 align-items-center">                    
+                    <label for="" class="rounded col-md-2 col-form-label text-md-start bg-info text-light">Phone Number</label> 
+                    <div class="col-md-10">
+                        <input type="tel" class="form-control">
+                    </div>                   
+                    
+                </div>
+            
+            <button class="mt-5 btn btn-primary form-control" type="submit">Update</button>
+            
+        </form>
+
+    </div>
+
     
 </body>
 </html>
