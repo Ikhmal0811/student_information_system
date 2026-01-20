@@ -5,7 +5,7 @@ function nextPage(){
     let checkPass = document.getElementById("pass").value;
     
     
-    if(checkID && checkPass){
+    if(checkID){
         window.location.href = "studentReg.html";
     }
     
