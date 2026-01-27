@@ -42,21 +42,21 @@
 
     <div class="container mt-4">
         <h1 class="mb-5 text-primary">Student Registration Form</h1>
-        <form action="">
+        <form>
 
             
                 <div class="row mb-4 align-items-center">                    
-                    <label for="" class="rounded col-md-2 col-form-label text-md-start bg-info text-light">Student Name</label> 
+                    <label for="" class="rounded col-md-2 col-form-label text-md-start bg-info text-light" >Student Name</label> 
                     <div class="col-md-10">
-                        <input type="text" class="form-control required">
+                        <input type="text" class="form-control required" id="name">
                     </div>                   
                     
                 </div>
 
                 <div class="row mb-4 align-items-center">                    
-                    <label for="" class="rounded col-md-2 col-form-label text-md-start bg-info text-light">Date of Birth</label> 
+                    <label for="" class="rounded col-md-2 col-form-label text-md-start bg-info text-light" >Date of Birth</label> 
                     <div class="col-md-10">
-                        <input type="date" class="form-control">
+                        <input type="date" class="form-control" id="dob">
                     </div>                   
                     
                 </div>
@@ -64,7 +64,7 @@
                 <div class="row mb-4 align-items-center">                    
                     <label for="" class="rounded col-md-2 col-form-label text-md-start bg-info text-light">Email</label> 
                     <div class="col-md-10">
-                        <input type="email" class="form-control">
+                        <input type="email" class="form-control" id="email">
                     </div>                   
                     
                 </div>
@@ -72,17 +72,20 @@
                 <div class="row mb-4 align-items-center">                    
                     <label for="" class="rounded col-md-2 col-form-label text-md-start bg-info text-light">Phone Number</label> 
                     <div class="col-md-10">
-                        <input type="tel" class="form-control">
+                        <input type="tel" class="form-control" id="phone">
                     </div>                   
                     
                 </div>
             
-            <button class="mt-5 btn btn-primary form-control" type="submit">Update</button>
+            <button class="mt-5 btn btn-primary form-control" type="submit" onclick="">Register</button>
             
         </form>
 
+        
+    
+
     </div>
 
-    
+    <script src="submit.js"></script>
 </body>
 </html>
