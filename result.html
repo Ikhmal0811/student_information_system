@@ -40,9 +40,129 @@
     </nav>
 
 
-    <div class="container">
-        <h1>Result Page</h1>
+    <div class="d-flex justify-content-center align-items-center mt-5">
+        
+
+        <div class="card p-3 rounded w-75 ">
+            <div class="card-header bg-primary rounded-top">
+                <h4 class="text-center fw-bold text-light">Student Results</h4>
+            </div>
+
+            <div class="card-body ">
+                
+                <input type="text" id="tableSearch" class="form-control mb-3" placeholder="Search student">
+
+                <table class="table table-bordered table-striped">
+                    <thead class="table-primary">
+                        <tr>
+                            <th>Student Name</th>
+                            <th>Subject</th>
+                            <th>Score</th>
+                            <th>Grade</th>
+                            <th>button</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableData" class="">
+
+                        <tr class="table-success"><td>Ali Hanafi</td><td>Web Application Design I - HTML5 & CSS3</td><td>90</td><td>A+</td><td>
+                            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#myModal1">View</button>
+                            <div class="modal" id="myModal1">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h4>Ali Hanafi</h4>
+                                            <button type="button" class="btn btn-close" data-bs-dismiss="modal"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p>Email: ali23@gmail.com</p>
+                                            <p>Phone Number: 0142345567</p>
+                                            <p>Course: </p>
+                                            <ul>
+                                                <li>Web Application Design I</li>
+                                                <li>Web Application Design II</li>
+                                                <li>Web Application Design III</li>
+                                            </ul>                                                                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </td>
+                        </tr>
+
+                        <tr class="table-success"><td>Muhammad Rasydan</td><td>Web Application Design I - HTML5 & CSS3</td><td>80</td><td>A</td><td>
+                            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#myModal3">View</button>
+                            <div class="modal" id="myModal3">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h4>Muhammad Rasydan</h4>
+                                            <button type="button" class="btn btn-close" data-bs-dismiss="modal"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p>Email: rasyidan@gmail.com</p>
+                                            <p>Phone Number: 0142342457</p>
+                                            <p>Course: </p>
+                                            <ul>
+                                                <li>Web Application Design I</li>
+                                                <li>Web Application Design II</li>
+                                                <li>Web Application Design III</li>
+                                            </ul>                                                                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </td>
+                        </tr>
+
+                        <tr class="table-warning"><td>Nur Haliza</td><td>Web Application Design II - Bootstrap 5</td><td>45</td><td>C</td><td>
+                            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#myModal2">View</button>
+                            <div class="modal" id="myModal2">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h4>Nur Haliza</h4>
+                                            <button type="button" class="btn btn-close" data-bs-dismiss="modal"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p>Email: halihali@gmail.com</p>
+                                            <p>Phone Number: 01622212457</p>
+                                            <p>Course: </p>
+                                            <ul>
+                                                <li>Web Application Design I</li>
+                                                <li>Web Application Design II</li>
+                                                <li>Web Application Design III</li>
+                                            </ul>                                                                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </td>
+                        </tr>
+
+
+
+
+                    </tbody>
+
+                </table>
+
+            </div>
+        </div>                                           
     </div>
+
+    <script>
+        const tableSearch = document.getElementById('tableSearch');
+        const tableRows = document.querySelectorAll('#tableData tr');
+
+        tableSearch.addEventListener('keyup', () => {
+            const filter = tableSearch.value.toLowerCase();
+
+            tableRows.forEach(row => {
+                const text = row.textContent.toLowerCase();
+                row.classList.toggle('d-none', !text.includes(filter));
+            });
+        });
+    </script>
     
 </body>
 </html>

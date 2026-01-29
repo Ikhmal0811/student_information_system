@@ -37,10 +37,75 @@
         </div>
 
     </nav>
+<div class="mx-5">
 
-    <div class="container">
-        <h1>Dashboard Page</h1>
+
+    <input type="text" class="input-group  mt-3 rounded" placeholder="Search here" id="searhCard">
+
+    <div id="cardContainer" class="row g-3 mt-3 ">
+        <div class="col-md-4">
+            <div class="card text-light rounded-4" style="background-color: lightslategray;">                
+                <div class="card-body" role="button">
+                    <h3 class="card-title text-center">Registration</h3>
+                    
+                    <a href="studentReg.html" class="stretched-link"></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card bg-info text-light rounded-4">                
+                <div class="card-body" role="button">
+                    <h3 class="card-title text-center">Course Registration</h3>
+                    
+                    <a href="studentReg.html" class="stretched-link"></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card text-light rounded-4" style="background-color: green;">                
+                <div class="card-body" role="button">
+                    <h3 class="card-title text-center">Intakes</h3>                    
+                    <a href="intake.html" class="stretched-link"></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card text-light rounded-4" style="background-color: lightcoral;">                
+                <div class="card-body" role="button">
+                    <h3 class="card-title text-center">Result</h3>                    
+                    <a href="result.html" class="stretched-link"></a>
+                </div>
+            </div>
+        </div>
+
+         <div class="col-md-4">
+            <div class="card text-light rounded-4" style="background-color: peru;">                
+                <div class="card-body" role="button">
+                    <h3 class="card-title text-center">Programes</h3>                    
+                    <a href="program.html" class="stretched-link"></a>
+                </div>
+            </div>
+        </div>
+
     </div>
+
+</div>
+    <script>
+        const search = document.getElementById('searhCard');
+        const cards = document.querySelectorAll('#cardContainer .card')
+
+        search.addEventListener('keyup', () => {
+            const filter = search.value.toLowerCase();            
+            
+            cards.forEach(cardlist => {
+                const text = cardlist.textContent.toLowerCase();
+                cardlist.parentElement.classList.toggle('d-none', !text.includes(filter));
+            })
+        })
+    </script>
     
 </body>
 </html>
